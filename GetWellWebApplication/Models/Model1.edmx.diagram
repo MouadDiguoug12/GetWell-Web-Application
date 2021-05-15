@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="97397cf560544d4a9ca4f8f629188dd4" Name="Diagram1" ZoomLevel="45">
+      <Diagram DiagramId="97397cf560544d4a9ca4f8f629188dd4" Name="Diagram1" ZoomLevel="112">
         <EntityTypeShape EntityType="db_a7366b_getwellModel.categorie" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="db_a7366b_getwellModel.certificat" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="db_a7366b_getwellModel.diagnostique" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />

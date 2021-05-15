@@ -1,0 +1,323 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navbar styles*/
+
+.Logo{
+    width: 3em;
+    height: 3em;
+}
+
+.navbar-brand{
+    margin-left: 5rem;
+}
+
+.navbar{
+    background-color: #ffffff;
+    height: 5em;
+    box-shadow: 0px 0px 5px brown;
+}
+
+
+
+.Btn-Prendre-rendez-vous,.inp
+{
+   height: 3em;
+   border-radius: 0.8em;
+   outline: none;
+   margin-right: 1rem;
+   margin-bottom: 0.5em;
+}
+
+.icon1{
+    margin-left:10px ;
+}
+.icon1,.icon2{
+    margin-right: 10px;
+}
+#med
+        {
+          margin-right: 4rem;
+           margin-top: 13px;
+        }
+
+
+.Btn-Prendre-rendez-vous,.Btn-Rechercher{
+    background-color: #08B26C;
+    color: #FFFFFF;
+    width: 10rem;
+    border: 1px solid #707070;
+    
+}
+
+
+/*title section styles*/ 
+
+h1{
+    padding: 0 5rem;
+    width: 100;
+    color: white;
+}
+
+.sub-title{
+    padding: 0 5rem;
+    color: white;
+    font-size: 20px;
+}
+
+.container-fluid{
+    background-color: #00579F;
+    height: 80em;
+    width: 100%;
+    position: relative;
+}
+
+.title-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6em;
+    width: 100%;
+    position: absolute;
+}
+
+#app{
+    width: 27rem;
+    margin-left: 13rem;
+    border-radius: 2rem;
+}
+#inscr{
+    width: 27rem;
+    height: 17rem;
+    border-radius: 2rem;
+    margin-left: 6rem;
+
+}
+
+.doctor-img1-container{
+    width: 40rem;
+    height:30rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.title2{
+     margin-top: 7rem;
+}
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.Logo1{
+    width: 4em;
+    height: 4em;
+}
+#dc{
+    border-radius: 2.25rem;
+    display: flex;
+    position: relative;
+    
+}
+.groupe{
+    margin-top: 10rem;
+}
+.corps{
+    margin-top: 15rem;
+}
+
+
+
+
+@media  (max-width : 576px) { 
+    
+    .navbar-brand{
+        margin-left: 5em;
+    }
+    .Logo{
+        transform: translate(-10em, -5em);
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #a7ceee;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    
+    .inp
+    {
+        width :29rem;
+    }
+    
+    #app{
+         width: 15rem;
+         margin-right: 10rem;
+    }
+     #dc{
+        margin-left: 1rem;
+
+     }
+    
+  
+}
+
+@media  (max-width : 590px) { 
+    .inp{
+        width:29rem ;
+    }
+}
+
+
+
+
+
+
+
+
+.foo1{
+       justify-content: center;
+       align-items: center;
+      flex-direction: column;
+}
+
+/*@media(max-width:614px)
+{
+        .inp{
+            width: 29rem;
+        }
+        
+
+}*/
+@media(max-width:1321px)
+{
+       
+    #dc{
+        
+        width: 28em;
+        height: 22em;
+        margin-top: 6rem; 
+    }
+   
+    
+    
+
+}
+@media(max-width:991px)
+{
+       
+    #dc{
+        
+        width: 29em;
+        height: 23em;
+        margin-top: 3rem; 
+        margin-left:14rem ;   
+    }
+    
+
+}
+@media(max-width:840px)
+{
+       
+    #dc{
+        
+        width: 27em;
+        height: 20em;
+        margin-top: 3rem; 
+        margin-left:11rem ;   
+    }
+
+}
+@media  (max-width: 768px) {
+    .Logo{
+        margin-top: -11px;
+    }
+    .navbar-brand{
+        margin-left: 2em;
+    }
+    
+    .Btn-Prendre-rendez-vous,.Btn-Rechercher
+    {
+        margin-right: 0.5em;
+    }
+    .sub-title{
+        margin-left: 0;
+    }
+    #dc{
+        
+        width: 27em;
+        height: 19em;
+        margin-top: 3rem; 
+        margin-left:7rem ;   
+   
+    }
+    
+    
+}
+@media(max-width:731px)
+{
+    #dc{
+        
+        width: 27em;
+        height: 19em;
+        margin-top: 3rem; 
+        margin-left:7rem ;   
+    }
+}
+
+@media(max-width:709px)
+{
+    #dc{
+        
+        width: 25em;
+        height: 19em;
+        margin-top: 3rem; 
+        margin-left:7rem ;   
+    }
+}
+
+@media(max-width:614px)
+{
+        .inp{
+            width: 29rem;
+        }
+        #dc{
+        
+            width: 24em;
+            height: 18em;
+            margin-top: 3rem; 
+            margin-left:4rem ;   
+        }
+
+}
+@media (max-width : 500px)
+{
+
+    #dc{
+   margin-left: 1rem;
+
+  } 
+}
+
+
+
+
+
+
+
+
+
+

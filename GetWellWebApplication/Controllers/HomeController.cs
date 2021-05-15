@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using GetWellWebApplication.Models;
 using CliassLibrary;
 using static CliassLibrary.BussinessLogic.PatientProcessor;
+using static CliassLibrary.BussinessLogic.MedecinProcessor;
+
 using Newtonsoft.Json;
 
 namespace GetWellWebApplication.Controllers
@@ -13,11 +15,11 @@ namespace GetWellWebApplication.Controllers
     public class HomeController : Controller
     {
 
-        db_a7366b_getwellEntities context = new db_a7366b_getwellEntities();
         public ActionResult Index()
         {
             return View();
         }
+        
 
         //public JsonResult GetAllLocation()
         //{
@@ -116,5 +118,53 @@ namespace GetWellWebApplication.Controllers
 
             return View();
         }
+        [HttpGet]
+        public ActionResult information_medecin()
+        {
+            return View();
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult information_medecin(medecin medecin)
+        {
+            bool result;
+            if (ModelState.IsValid)
+            {
+                result = CreateMedecin(medecin.Username,
+                    medecin.cin,
+                    medecin.Nom,
+                    medecin.Prenom,
+                    Convert.ToByte( medecin.Image),
+                    medecin.Tel,
+                    medecin.Email,
+                    medecin.password,
+                    medecin.ville,
+                    medecin.Adresse,
+                    Convert.ToDouble(medecin.longitude),
+                    Convert.ToDouble(medecin.latitude),
+                    medecin.Linkeden,
+                    medecin.Facebook,
+                    medecin.Whatsapp,
+                    medecin.Instagram,
+                    medecin.Twitter);
+                if (result)
+                {
+                    ViewBag.Data = null;
+                    return RedirectToAction("Accueil");
+                }
+                else
+                {
+                    ViewBag.Data = "Exists";
+                    return View();
+                }
+            }
+            return new EmptyResult();
+        }
+        public ActionResult Accueil()
+        {
+            return View();
+        }
+
     }
 }

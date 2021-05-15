@@ -1,0 +1,256 @@
+﻿
+@model GetWellWebApplication.Models.medecin
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/style-info-doc.css">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Informatiens de patiens</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar sticky-top">
+            <a class="navbar-brand" href="index.html">
+                <img src="~/Images/LogoPNG.png" class="Logo">
+            </a>
+            <form class="d-flex">
+                @Html.ActionLink("Tele consultation", "TeleConsultation", "Home", null, new { @class = "btn Btn-tele-consulatation" })
+                @Html.ActionLink("Prendre un rendez-vous", "PrendreRendezvous", "Home", null, new { @class = "btn Btn-Prendre-rendez-vous" })
+                
+            </form>
+        </nav>
+    </header>
+    <form method="get">
+        <div class="informations-medecin">
+            <div class="container-fluid form-section">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 com-lg-4 title-container-informations">
+                        <h1 class="title-infomations">Les <b>informations</b> de Docteur</h1>
+                        <hr class="prgrss">
+                    </div>
+                    <div class="col-sm-12 col-md-8 col-lg-8">
+                        <form method="post">
+                            <div class="container-fluid form-content">
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="username">Nom D'utilisateur*</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "normal", placeholder = "entrer votre nom d'utilisateur" } })
+
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="cin">CIN*</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+
+                                        @Html.TextBoxFor(model => model.cin, new { @class = "normal", placeholder = "entrer votre CIN" })
+                                        @Html.ValidationMessageFor(model => model.cin, "", new { @class = "text-white m-5" })
+
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="nom">Nom *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Nom, new { htmlAttributes = new { @class = "normal", placeholder = "entrer votre Nom" } })
+                                        @Html.ValidationMessageFor(model => model.Nom, "", new { @class = "text-white m-3" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="prenom">Prenom *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Prenom, new { Class = "normal", placeholder = "entrer votre prenom" })
+                                        @Html.ValidationMessageFor(model => model.Prenom, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="photo">photo *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <input type="file" name="uploadfile" id="img" style="display:none;" />
+                                        <label for="img" id="photo" class="normal">Choisir une image</label>
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="tel">Tel *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Tel, new { Class = "normal", placeholder = "entrer votre numero telephone" })
+                                        @Html.ValidationMessageFor(model => model.Tel, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="email">Email *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Email, new { Class = "normal", placeholder = "entrer votre Email" })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="password">Mot de passe *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.password, new { Class = "normal", placeholder = "entrer votre Mot de passe" })
+                                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="city">Ville *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <select name="cities" id="city">
+                                            <option value="Casablanca">Casablanca</option>
+                                            <option value="Fes">Fes</option>
+                                            <option value="Tanger">Tanger</option>
+                                            <option value="Marrakech">Marrakech</option>
+                                            <option value="Salé">Salé</option>
+                                            <option value="Meknes">Meknes</option>
+                                            <option value="Rabat">Rabat</option>
+                                            <option value="Oujda">Oujda</option>
+                                            <option value="kenitra">kenitra</option>
+                                            <option value="Agadir">Agadir</option>
+                                            <option value="Tétouan">Tétouan</option>
+                                            <option value="Témara">Témara</option>
+                                            <option value="Safi">Safi</option>
+                                            <option value="Mohammédia">Mohammédia</option>
+                                            <option value="Khouribga">Khouribga</option>
+                                            <option value="Nador">Nador</option>
+                                            <option value="El jadida">El jadida</option>
+                                            <option value="Taza">Taza</option>
+                                            <option value="Khémisset">Khémisset</option>
+                                            <option value="Béni Mellal">Béni Mellal</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="adresse">Adresse *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Adresse, new { Class = "normal", placeholder = "entrer votre Adresse" })
+                                        @Html.ValidationMessageFor(model => model.Adresse, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="localisation">longitude et latitude *</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.longitude, new { Class = "normal", placeholder = "longitude", id = "long" })
+                                        @Html.ValidationMessageFor(model => model.longitude, "", new { @class = "text-white m-5" })
+                                        @Html.TextBoxFor(model => model.latitude, new { Class = "normal", placeholder = "latitude", id = "lat" })
+                                        @Html.ValidationMessageFor(model => model.latitude, "", new { @class = "text-white m-5" })
+
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="Linkedin">Linkedin</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Linkeden, new { Class = "normal", placeholder = "entrer votre Linkedin" })
+                                        @Html.ValidationMessageFor(model => model.Linkeden, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="fb">Facebook</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Facebook, new { Class = "normal", placeholder = "entrer votre Facebook" })
+                                        @Html.ValidationMessageFor(model => model.Facebook, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="Whatssap">Whatssap</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Whatsapp, new { Class = "normal", placeholder = "entrer votre whatssap" })
+                                        @Html.ValidationMessageFor(model => model.Whatsapp, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="insta">instagram</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Instagram, new { Class = "normal", placeholder = "entrer votre instagram" })
+                                        @Html.ValidationMessageFor(model => model.Instagram, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <label for="twit">twitter</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        @Html.TextBoxFor(model => model.Twitter, new { Class = "normal", placeholder = "entrer votre Twitter" })
+                                        @Html.ValidationMessageFor(model => model.Twitter, "", new { @class = "text-white m-5" })
+                                    </div>
+                                </div>
+                                <div class="row g-10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6 formatmerssage">
+
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6 button-container">
+                                        <button id="Sinscrire" type="button">s'inscrire</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <footer class="bg-dark text-center text-white">
+                    <div class="container p-4">
+                        <div class="row foo1">
+                            <!--Grid column-->
+                            <div class="col-lg-6 col-md-12 mb-4 col-sm-12">
+                                <img src="~/Images/LogoPNG.png" class="Logo1">
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <h5>Contacter le team GetWell</h5>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <h6>A propos de nous</h6>
+                                &copy; Copyrights GetWell 2021 - tous droits réservés
+                            </div>
+
+                        </div>
+
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </form>
+
+    <script src="scripts/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="scripts/form1 scripts.js"></script>
+    <script src="scripts/Index script.js"></script>
+    <script src="css/fontawesome-free-5.15.2-web/js/all.js"></script>
+</body>
+</html>
+
+

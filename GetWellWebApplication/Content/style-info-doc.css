@@ -1,0 +1,298 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navbar styles*/
+
+.Logo{
+    width: 3em;
+    height: 3em;
+}
+
+.navbar-brand{
+    margin-left: 5rem;
+}
+
+.navbar{
+    background-color: #ffffff;
+    height: 5em;
+    box-shadow: 0px 0px 5px brown;
+}
+.Btn-Prendre-rendez-vous,
+.Btn-tele-consulatation{
+   height: 3em;
+   border-radius: 0.8em;
+   outline: none;
+   margin-right: 1rem;
+   margin-bottom: 0.5em;
+}
+
+.Btn-tele-consulatation{
+   background-color: #FFFFFF;
+   border: 3px solid #000000;
+}
+.Btn-Prendre-rendez-vous{
+    background-color: #08B26C;
+    color: #FFFFFF;
+    width: 15em;
+    margin-right: 5rem;
+    border: 1px solid #707070;
+}
+/* title section*/
+.container-fluid{
+    background-color: #00579F;
+    height: 71em;
+    width: 100%;
+    position: relative;
+}
+
+.title-container-informations{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.title-infomations{
+    padding-left: 3em;
+    padding-right: 4.5em;
+    padding-bottom: 3em;
+    text-shadow: 0 1px 2px #000000;
+}
+/*contenu du formumaire*/
+.form-content{
+    display: grid;
+    align-items: center;
+}
+
+.normal,select{
+    background-color: #0060AF;
+    outline: none;
+    border: 0.2px solid #FFFFFF;
+    width: 16em;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 1em;
+    margin-left: 1.77em;
+    transition: 0.3s;
+    margin-top: 2rem;
+}
+textarea:hover,
+#photo:hover,
+input:hover,
+textarea:focus,
+input:focus{
+    background-color: #00579F;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+}
+
+::placeholder{
+    color: white;
+    margin-left: 1em;
+}
+
+label{
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 2em;
+}
+#long,#lat{
+    width: 7em;
+}
+#Sinscrire{
+    width: 15em;
+    outline: none;
+    border: 1px solid #707070;
+    background-color: #08B26C;
+    height: 2.7em;
+    color: white;
+    border-radius: 15px;
+    transition: 0.7s;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+#Sinscrire:hover{
+    border: 1px solid #fccdcd;
+    background-color: #00579F;
+    border-radius: 20px;
+}
+
+.button-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+}
+.Logo1{
+    width: 4em;
+    height: 4em;
+}
+.foo1{
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+ }
+
+
+@media only screen and (max-width: 991px) {
+    textarea,
+    input{
+        width: 25em;
+    }
+    .title-infomations{
+        margin-left: 3em;
+    }
+    .container-fluid{
+        height: 123em;
+    }
+    .button-container{
+        margin-left: 6rem;
+    }
+}
+
+@media only screen and (max-width: 882px) {
+    textarea,
+    input{
+        width: 22em;
+    }
+    .button-container{
+        margin-left: -3rem;
+    }
+   
+}
+@media only screen and (max-width: 814px) {
+    textarea,
+    input{
+        width: 20em;
+    }
+    .container-fluid{
+        height: 123em;
+    }
+    .button-container{
+        margin-left: -6rem;
+    }
+}
+
+@media only screen and (max-width: 776px) {
+    textarea,
+    input{
+        width: 19em;
+    }
+    .container-fluid{
+        height: 123em;
+    }
+}
+
+
+@media only screen and (max-width: 744px){
+    textarea,
+    input{
+        width: 25em;
+    }
+    .container-fluid{
+        height: 123em;
+    }
+    
+}
+
+@media only screen and (max-width: 730px){
+    textarea,
+    input{
+        width: 29em;
+    }
+    .container-fluid{
+        height: 123em;
+    }
+    .navbar-brand{
+        margin-left: 2em;
+    }
+    
+}
+
+@media only screen and (max-width: 627px){
+    textarea,
+    input{
+        width: 22em;
+    }
+    .container-fluid{
+        height: 123em;
+    }
+    .navbar-brand{
+        display: none;
+        
+    }
+    .Btn-tele-consulatation{
+        width: 10rem;
+    }
+    .Btn-Prendre-rendez-vous,.Btn-tele-consulatation{
+        margin-left: 3rem;
+
+    }
+    .button-container{
+        margin-left: -5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 613px){
+    .button-container{
+        margin-left: -5rem;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    textarea,
+    input{
+        width: 21em;
+    }
+    .title-infomations{
+        margin-top: 3em;
+    }
+    .container-fluid{
+        height: 123em;
+    }
+    .button-container{
+        margin-left: -1rem;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #a7ceee;
+    }
+    .navbar-brand{
+        display: none;
+        
+    }
+    .d-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .Btn-tele-consulatation{
+        width: 15rem;
+    }
+    .Btn-Prendre-rendez-vous,.Btn-tele-consulatation{
+        margin-left: 5rem;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

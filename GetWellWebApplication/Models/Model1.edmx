@@ -504,7 +504,7 @@
           <Property Name="Instagram" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Twitter" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Linkeden" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="Binary" MaxLength="64" FixedLength="true" />
+          <Property Name="password" Type="String" />
           <Property Name="salt" Type="Guid" />
           <Property Name="latitude" Type="Double" />
           <Property Name="longitude" Type="Double" />
@@ -514,6 +514,7 @@
           <NavigationProperty Name="nootation" Relationship="Self.FK__nootation___Id_d__4CA06362" FromRole="medecin" ToRole="nootation" />
           <NavigationProperty Name="rendezvous" Relationship="Self.FK__rendezvou___Id_d__412EB0B6" FromRole="medecin" ToRole="rendezvous" />
           <NavigationProperty Name="teleconsultation" Relationship="Self.FK__teleconsu___Id_d__5070F446" FromRole="medecin" ToRole="teleconsultation" />
+          <Property Name="cin" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="nootation">
           <Key>

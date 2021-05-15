@@ -1,0 +1,110 @@
+﻿
+@model GetWellWebApplication.Models.medecin
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/Stylehome.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Acceuille</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar sticky-top ">
+            <a class="navbar-brand" href="#">
+                <img src="~/Images/LogoPNG.png" class="Logo">
+            </a>
+            <form class="d-flex">
+                <h5 id="med">Vous etes un Médecin?</h5>
+                @Html.ActionLink("Inscrivez-Vous", "information_medecin", "Home", null, new { @class = "btn Btn-Prendre-rendez-vous" })
+            </form>
+        </nav>
+        <div class="container-fluid">
+
+            <div class="row title-section">
+                <div class=".col-md-4">
+
+                    <div class="title-container">
+                        <h1>Trouvez un Médecin</h1>
+                        <p class="sub-title">Près de chez vous et prenez un rendez-vous en ligne.</p>
+
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="input-group-text inp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" fill="currentColor" class="bi bi-geo-alt icon2" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                        <input type="text" placeholder="Ville" class="form-control">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="20" fill="currentColor" class="bi bi-clipboard-check icon1" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                        </svg>
+                        <input type="text" placeholder="Spécialité" class="form-control">
+                        <div>
+                            <button class="btn Btn-Rechercher" type="button">Rechercher</button>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row corps">
+                    <div class="col-sm-12 col-md-12 col-lg-6 title2">
+                        <h1>Ou Bien Vous ete un Médecin?</h1>
+                        <p class="sub-title">
+                            Rejoindre GetWell,
+                            Et Télécharger notre Apllication Desktop pour gérer votre Rendez-Vous.GetWell est la meilleure façon de développer
+                            l'activité de votre cabinet
+                        </p>
+
+                        <div class="text-center">
+                            @Html.ActionLink("Télecharger", "", "Home", null, new { @class = "btn Btn-Rechercher", @id = "telecharger" })
+                            @Html.ActionLink("Inscrivez-Vous", "information_medecin", "Home", null, new { @class = "btn Btn-Rechercher", @id = "inscrivez" })
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <img src="~/Images/doctor.jpg" id="dc" class="doctor-img1-container">
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4">
+            <div class="row foo1">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 col-sm-12">
+                    <img src="~/Images/LogoPNG.png" class="Logo1">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h5>Contacter le team GetWell</h5>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h6>A propos de nous</h6>
+                    &copy; Copyrights GetWell 2021 - tous droits réservés
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
